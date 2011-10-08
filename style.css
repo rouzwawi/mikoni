@@ -10,8 +10,11 @@ h2 {
 .c1 { color: #3b5998; }
 .c2 { color: #3b988e; }
 .c3 { color: #3b983f; }
-.c4 { color: #8e983b; }
-.c5 { color: #98443b; }
+.c4 { color: #c7cb5a; }
+.c5 { color: #cb5353; }
+.gray { color: #aaa; }
+
+.smaller { font-size: 0.4em; }
 
 #root {
 	width: 100%;
