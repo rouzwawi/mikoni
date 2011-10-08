@@ -4,24 +4,24 @@
 	<title>Mikoni Test</title>
 	<meta property="fb:app_id"      content="282925545059633">
 	<meta property="og:type"        content="mikonam:chi">
-	<meta property="og:url"         content="http://rouzbeh.videoplaza.org/mikoni/mikoni.html">
-	<meta property="og:title"       content="Chi Chi Mikoni">
+	<meta property="og:url"         content="http://rouzbeh.videoplaza.org/mikoni">
+	<meta property="og:title"       content="Mikoni | Home">
 	<meta property="og:description" content="Chert o Pert Mikonam">
 	<meta property="og:image"       content="http://a2.sphotos.ak.fbcdn.net/hphotos-ak-ash4/314873_10150296571226148_604806147_8250312_2129932419_n.jpg">
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 </head>
 <body>
-
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>
+    var url = 'http://rouzbeh.videoplaza.org/mikoni';
     FB.init({ 
         appId:'282925545059633', cookie:true, 
         status:true, xfbml:true 
     });
     function postMikoni(action)
     {
-        FB.api('/me/mikonam:' + action + '?chi=http://rouzbeh.videoplaza.org/mikoni/mikoni.html','post',
+        FB.api('/me/mikonam:' + action + '?chi=' + url,'post',
         function(response) {
             if (!response || response.error) {
                 alert('Error occured');
@@ -33,19 +33,15 @@
     function mikoni() { postMikoni('mikoni'); }
     function concur() { postMikoni('concur'); }
 </script>
+<!-- <fb:add-to-timeline></fb:add-to-timeline> -->
 
-<p>
-	<!-- <fb:add-to-timeline></fb:add-to-timeline> -->
-</p>
-<p>
-	<fb:like href="http://rouzbeh.videoplaza.org/mikoni/mikoni.html" width="450" height="80"/>
-</p>
-<p>
-  <form>
-    <input type="button" value="Mikoni!" onclick="mikoni()" />
-    <input type="button" value="Concur!" onclick="concur()" />
-  </form>
-</p>
+<div id="root">
+	<h2 class="logo"><span class="c1 first">M</span><span class="rest"><span class="c2">i</span><span class="c3">k</span><span class="c4">o</span><span class="c5">n</span><span class="c1">i</span></span></h2>
+	<p class="slogan">Don't just like. Do whatever you like!</p>
+	<p>
+		<fb:like href="http://rouzbeh.videoplaza.org/mikoni" width="300"/>
+	</p>
+</div>
 
 
 </body>

@@ -1,0 +1,28 @@
+body {
+	font-size: 18pt;
+	font-family: Georgia;
+}
+
+h2 {
+	font-size: 100pt;
+}
+
+.c1 { color: #3b5998; }
+.c2 { color: #3b988e; }
+.c3 { color: #3b983f; }
+.c4 { color: #8e983b; }
+.c5 { color: #98443b; }
+
+#root {
+	width: 100%;
+	margin: 1em auto;
+	text-align: center;
+}
+
+.logo {
+	font-family: Trebuchet MS;
+	margin-bottom: 0;
+}
+.slogan {
+	margin: 0 0 2em 0;
+}
