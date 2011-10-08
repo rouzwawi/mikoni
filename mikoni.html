@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# mikonam: http://ogp.me/ns/fb/mikonam#">
+	<title>Mikoni Test</title>
+	<meta property="fb:app_id"      content="282925545059633">
+	<meta property="og:type"        content="mikonam:chi">
+	<meta property="og:url"         content="http://rouzbeh.videoplaza.org/mikoni.html">
+	<meta property="og:title"       content="Chi Chi Mikoni">
+	<meta property="og:description" content="Chert o Pert Mikonam">
+	<meta property="og:image"       content="http://a2.sphotos.ak.fbcdn.net/hphotos-ak-ash4/314873_10150296571226148_604806147_8250312_2129932419_n.jpg">
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+    FB.init({ 
+        appId:'282925545059633', cookie:true, 
+        status:true, xfbml:true 
+    });
+    function postMikoni(action)
+    {
+        FB.api('/me/mikonam:' + action + '?chi=http://rouzbeh.videoplaza.org/mikoni.html','post',
+        function(response) {
+            if (!response || response.error) {
+                alert('Error occured');
+            } else {
+                alert('Post was successful! Action ID: ' + response.id);
+            }
+        });
+    }
+    function mikoni() { postMikoni('mikoni'); }
+    function concur() { postMikoni('concur'); }
+</script>
+
+<p>
+	<!-- <fb:add-to-timeline></fb:add-to-timeline> -->
+</p>
+<p>
+	<fb:like href="http://rouzbeh.videoplaza.org/mikoni.html" width="450" height="80"/>
+</p>
+<p>
+  <form>
+    <input type="button" value="Mikoni!" onclick="mikoni()" />
+    <input type="button" value="Concur!" onclick="concur()" />
+  </form>
+</p>
+
+
+</body>
+</html>
