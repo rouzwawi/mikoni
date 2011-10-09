@@ -1,4 +1,4 @@
-var url = 'http://rouzbeh.videoplaza.org/mikoni';
+var url = 'http://rouzbeh.videoplaza.org/mikoni/';
 function postMikoni(action)
 {
     FB.api('/me/mikonam:' + action + '?chi=' + url,'post',
