@@ -1,18 +1,18 @@
 !!! 5
 html
 	head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# mikonam: http://ogp.me/ns/fb/mikonam#')
-	title Mikoni | #{title}
-	meta(property='fb:app_id'      , content='282925545059633')
-	meta(property='og:type'        , content='mikonam:chi')
-	meta(property='og:url'         , content='http://www.mikoni.se/')
-	meta(property='og:title'       , content='#{title}')
-	meta(property='og:description' , content='Chert o Pert Mikonam')
-	meta(property='og:image'       , content='http://www.mikoni.se/img/mikoni.png')
-	link(rel='stylesheet', href='/css/style.css')
+		title Mikoni | #{title}
+		meta(property='fb:app_id'      , content='282925545059633')
+		meta(property='og:type'        , content='mikonam:chi')
+		meta(property='og:url'         , content='http://www.mikoni.se/')
+		meta(property='og:title'       , content='#{title}')
+		meta(property='og:description' , content='Chert o Pert Mikonam')
+		meta(property='og:image'       , content='http://www.mikoni.se/img/mikoni.png')
+		link(rel='stylesheet', href='/css/style.css')
 
 	body
-	#fb-root
-	script(src='http://connect.facebook.net/en_US/all.js')
-	script(src='js/fbinit.js')
+		#fb-root
+		script(src='http://connect.facebook.net/en_US/all.js')
+		script(src='js/fbinit.js')
 
-	div#root!= body
+		div#root!= body
