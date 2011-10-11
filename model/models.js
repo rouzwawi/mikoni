@@ -4,7 +4,8 @@ var Schema = mongoose.Schema
   , ObjectId = Schema.ObjectId;
 
 var Chi = new Schema({
-    title    : String
+    title    : { type: String, index: true }
+  , url      : String
   , body     : String
   , date     : Date
 });

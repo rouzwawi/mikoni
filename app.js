@@ -4,18 +4,12 @@
  */
 
 var express = require('express');
-var mongo   = require('mongodb');
 
 
-// MongoDB Configuration
+// MongoDB Mongoose Connection
 
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/mikoni')
-
-
-// Mongoose Models
-
-Chi = require('./model/models.js').Chi(db);
 
 
 // App Configuration
@@ -39,21 +33,8 @@ app.configure('production', function(){
 	app.use(express.errorHandler()); 
 });
 
-// Routes
-
-app.get('/', function(req, res){
-	res.render('index', { title: 'Home'});
-});
-
-app.all('/test', function(req, res){
-	BlogPost.findOne({title:/^foo/}, function(e,item) {
-		console.log(item);
-	});
-
-	res.render('index', {
-		title: 'Debug'
-	});
-});
+// set up routes together with db
+require('./routes.js').route(app, db);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
