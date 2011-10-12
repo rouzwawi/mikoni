@@ -10,13 +10,14 @@ module.exports.route = function(app, db) {
 
 	// Sample Chi page
 	app.get('/:title', function(req, res) {
-		res.render('sample', { title: req.params.title });
+		var t = req.params.title;
+		res.render('sample', { title: t, url: t });
 	});
 
 	
 	// Root route
 	app.get('/', function(req, res) {
-		res.render('index', { title: 'Home' });
+		res.render('index', { title: 'Home', url: '' });
 	});
 
 };
