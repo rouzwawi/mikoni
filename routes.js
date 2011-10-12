@@ -11,6 +11,13 @@ module.exports.route = function(app, db) {
 	// Sample Chi page
 	app.get('/:title', function(req, res) {
 		var t = req.params.title;
+		Chi.findOne({title: t}, function(err, chi) {
+			if (err) return;
+			if (!chi) {
+				new Chi({title: t}).save();
+			}
+		});
+		
 		res.render('sample', { title: t, url: t });
 	});
 

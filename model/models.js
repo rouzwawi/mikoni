@@ -5,7 +5,6 @@ var Schema = mongoose.Schema
 
 var Chi = new Schema({
     title    : { type: String, index: true }
-  , url      : String
   , body     : String
   , date     : Date
 });
