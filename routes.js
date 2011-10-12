@@ -18,13 +18,13 @@ module.exports.route = function(app, db) {
 			}
 		});
 		
-		res.render('sample', { title: t, url: t });
+		res.render('sample', { title: t, ogtitle: t, url: t });
 	});
 
 	
 	// Root route
 	app.get('/', function(req, res) {
-		res.render('index', { title: 'Home', url: '' });
+		res.render('index', { title: 'Home', ogtitle: 'Mikoni | Home', url: '' });
 	});
 
 };
