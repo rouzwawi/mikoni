@@ -29,3 +29,16 @@ h2 {
 .slogan {
 	margin: 0 0 2em 0;
 }
+
+.mikoni {
+	font-family: Trebuchet MS;
+}
+
+.mikoni a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.mikoni a:hover {
+	font-weight: bolder;
+}

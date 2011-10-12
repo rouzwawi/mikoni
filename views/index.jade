@@ -1,12 +1,5 @@
-script(src='js/index.js')
-
 h2.logo
-	span.c1.first M
-	span.c2       i
-	span.c3       k
-	span.c4       o
-	span.c5       n
-	span.c1       i
+	!= partial('colorful', { locals: { title: 'Mikoni' } })
 p.slogan Don't just like. Do whatever you like!
 p
 	fb:like(href='http://www.mikoni.se/', width='420')

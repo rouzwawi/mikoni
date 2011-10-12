@@ -1,7 +1,7 @@
 var url = 'http://www.mikoni.se/';
-function postMikoni(action)
+function postMikoni(action, title)
 {
-    FB.api('/me/mikonam:' + action + '?chi=' + url,'post',
+    FB.api('/me/mikonam:' + action + '?chi=' + url + title,'post',
     function(response) {
         if (!response || response.error) {
             alert('Error occured');
@@ -10,5 +10,5 @@ function postMikoni(action)
         }
     });
 }
-function mikoni() { postMikoni('mikoni'); }
-function concur() { postMikoni('concur'); }
+function mikoni(title) { postMikoni('mikoni', title); }
+function concur(title) { postMikoni('concur', title); }

@@ -1,0 +1,11 @@
+//.fb-add-to-timeline(data-show-faces='true', data-mode='button')
+.fb-login-button(data-show-faces='true', data-width='320', data-max-rows='1')
+
+h2.logo
+	!= partial('colorful')
+p.slogan Don't just like. Do whatever you like!
+.mikoni
+	a(onclick='mikoni("#{title}")')
+		span.c1 &raquo; Mikoni 
+		!= partial('colorful', { locals: { title: (title + "!") } })
+

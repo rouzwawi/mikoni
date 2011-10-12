@@ -7,21 +7,16 @@ module.exports.route = function(app, db) {
 
 
 	// Routes
+
+	// Sample Chi page
+	app.get('/:title', function(req, res) {
+		res.render('sample', { title: req.params.title });
+	});
+
 	
 	// Root route
 	app.get('/', function(req, res) {
-		res.render('index', { title: 'Home'});
-	});
-
-	// Testing route
-	app.all('/test/:title', function(req, res) {
-		var q = {title:req.params.title};
-		Chi.findOne(q, function(e,item) {
-			res.render('test', {
-			    title: 'Test'
-			  , item: item
-			});
-		});
+		res.render('index', { title: 'Home' });
 	});
 
 };
