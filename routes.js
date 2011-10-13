@@ -11,10 +11,11 @@ module.exports.route = function(app, db) {
 	// Sample Chi page
 	app.get('/:title', function(req, res) {
 		var t = req.params.title;
-		Chi.findOne({title: t}, function(err, chi) {
+		var l = t.toLowerCase();
+		Chi.findOne({name: l}, function(err, chi) {
 			if (err) return;
 			if (!chi) {
-				new Chi({title: t}).save();
+				new Chi({name: l, title: t}).save();
 			}
 		});
 		
