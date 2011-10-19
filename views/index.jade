@@ -2,4 +2,8 @@ h2.logo
 	!= partial('colorful', { locals: { title: 'Mikoni' } })
 p.slogan Don't just like. Do whatever you like!
 p
+	for chi in chis
+		#chi
+			a(href='/#{chi.title}')!= partial('colorful', { locals: { title: chi.title }})
+p
 	fb:like(href='http://www.mikoni.se/', width='420')
