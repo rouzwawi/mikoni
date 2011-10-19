@@ -6,7 +6,7 @@ p
 	input.mikonam(type='text')
 	input.return(type='image', src='/img/return.png')
 	for chi in chis
-		#chi
+		.chi
 			a(href='/#{chi.title}')!= partial('colorful', { locals: { title: chi.title }})
 p
 	fb:like(href='http://www.mikoni.se/', width='420')

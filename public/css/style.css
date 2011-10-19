@@ -57,12 +57,12 @@ input.return {
 	margin-bottom: 1.5em;
 }
 
-.mikoni a {
+.mikoni a, .chi a {
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.mikoni a:hover {
+.mikoni a:hover, .chi a:hover {
 	font-weight: bolder;
 }
 
