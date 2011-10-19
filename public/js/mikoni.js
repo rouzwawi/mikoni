@@ -1,3 +1,15 @@
+$(function() {
+	function goto() {
+		window.location = '/' + $('input.mikonam').val();
+	}
+
+	$('input.mikonam').watermark('mikoni?', { useNative: false });
+	$('input.mikonam').keypress(function(event) {
+		if (event.which == 13) goto();
+	});
+	$('input.return').click(function() { goto(); });
+});
+
 var url = 'http://www.mikoni.se/';
 var did = false;
 function postMikoni(action, title)

@@ -2,6 +2,9 @@ h2.logo
 	!= partial('colorful', { locals: { title: 'Mikoni' } })
 p.slogan Don't just like. Do whatever you like!
 p
+	span chi 
+	input.mikonam(type='text')
+	input.return(type='image', src='/img/return.png')
 	for chi in chis
 		#chi
 			a(href='/#{chi.title}')!= partial('colorful', { locals: { title: chi.title }})

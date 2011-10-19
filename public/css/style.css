@@ -1,10 +1,29 @@
 body {
 	font-size: 18pt;
 	font-family: Georgia;
+	color: #555;
 }
 
 h2 {
 	font-size: 100pt;
+}
+
+input {
+	font-size: 16pt;
+	font-family: Georgia;
+	color: #555;
+	border: solid 1px #ddd;
+	padding: 3px;
+	width: 340px;
+}
+input.return {
+	border: none;
+	padding: none;
+	width: auto;
+	vertical-align: bottom;
+}
+.watermark {
+	color: #aaa !important;
 }
 
 .c1 { color: #3b5998; }
@@ -30,7 +49,7 @@ h2 {
 	margin-top: 0.6em;
 }
 .slogan {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 }
 
 .mikoni {
