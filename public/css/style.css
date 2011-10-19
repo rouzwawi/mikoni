@@ -16,6 +16,8 @@ h2 {
 
 .smaller { font-size: 0.4em; }
 
+.hide { display: none; }
+
 #root {
 	width: 100%;
 	margin: 1em auto;
@@ -43,4 +45,9 @@ h2 {
 
 .mikoni a:hover {
 	font-weight: bolder;
+}
+
+.mikoni .did {
+	font-size: 0.6em;
+	color: #999;
 }
