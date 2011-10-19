@@ -5,14 +5,17 @@ function postMikoni(action, title)
 	if (did) return;
 	did = true;
 
+	$('.mikoni .doing').show('slow');
 	FB.api('/me/mikonam:' + action + '?chi=' + url + title,'post',
 	function(response) {
 		if (!response || response.error) {
+			$('.mikoni .doing').hide('slow');
 			alert('Try logging it with Facebook first');
 			did = false;
 		} else {
 			//alert('Post was successful! Action ID: ' + response.id);
-			$('.did.hide').show('slow');
+			$('.mikoni .doing').hide('slow');
+			$('.mikoni .did').show('slow');
 			$.ajax({
 				url: '/' + title + "/touch",
 				type: 'put'
